@@ -1,0 +1,45 @@
+# global values can be shared with all commvault components.
+
+global:
+  # Optional
+  namespace:
+
+  # Optional. default is svc.cluster.local 
+  clusterDomain: 
+
+  image:
+    # Optional. must end with /
+    registry: 
+    # Optional. Default is latest
+    tag: 
+    # Optional. Name of the secret
+    pullSecret: 
+
+  storageClass:
+    # Optional. Name of the storage class for logs. Default storage class will be used if not specified
+    logs: 
+    # Optional. default is "10Gi" 
+    logs_size: 
+    # Optional. Name of the storage class for registry and certificates. Default storage class will be used if not specified
+    certificates: 
+    # Optional. default is "200M" 
+    certificates_size: 
+    # Optional. Name of the storage class for webserver cache for uploads and downloads. Default storage class will be used if not specified
+    cache: 
+    # Optional. default is "10Gi" 
+    cache_size: 
+
+  # Optional. Deployment annotations
+  deploymentannotations:
+
+  # Optional. Service annotations
+  serviceannotations:
+
+  # Optional. Deployment requests and limits. Enable only those values that need to be set.
+  # resources:
+  #   requests:
+  #     memory: 
+  #     cpu:
+  #   limits:
+  #     memory:
+  #     cpu: 
