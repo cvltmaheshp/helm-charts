@@ -3,6 +3,16 @@ entries:
   commandcenter:
   - apiVersion: v2
     appVersion: "1"
+    created: "2022-11-22T18:08:13.054662291Z"
+    description: A Helm chart for creating the command center
+    digest: 0f579aba5de97404cf4d2e31af794d0f9cf3f95cb4112acdf49b5ceb2d45a82c
+    name: commandcenter
+    type: application
+    urls:
+    - https://github.com/cvltmaheshp/helm-charts/releases/download/commandcenter-1.0.2/commandcenter-1.0.2.tgz
+    version: 1.0.2
+  - apiVersion: v2
+    appVersion: "1"
     created: "2022-11-10T19:55:52.927176397Z"
     description: A Helm chart for creating the command center
     digest: 09977f983774f570d89109cf7cd01f857f9be6b7adc386c3128a72c83b461b9c
@@ -14,6 +24,16 @@ entries:
   commserve:
   - apiVersion: v2
     appVersion: "1"
+    created: "2022-11-22T18:08:13.268792452Z"
+    description: A Helm chart for creating the CS component
+    digest: 604140d49a62ca38e78aeb87d891819c93db759cf21aa8541b057b530e947317
+    name: commserve
+    type: application
+    urls:
+    - https://github.com/cvltmaheshp/helm-charts/releases/download/commserve-1.0.2/commserve-1.0.2.tgz
+    version: 1.0.2
+  - apiVersion: v2
+    appVersion: "1"
     created: "2022-11-10T19:55:53.048228311Z"
     description: A Helm chart for creating the CS component
     digest: db1540a570e65050d6ca58b7c851f75f95588f7000ee8a7fa6690148b2b6346a
@@ -23,6 +43,17 @@ entries:
     - https://github.com/cvltmaheshp/helm-charts/releases/download/commserve-1/commserve-1.tgz
     version: "1"
   config:
+  - apiVersion: v2
+    appVersion: "1"
+    created: "2022-11-22T18:08:13.485301168Z"
+    description: A Helm chart for creating the base consiguration and secret  for
+      all cv applications in the namespace
+    digest: 56471c7c77ff6ac24ea4b14900e57b3a76f7aa7876814f879d2ddf730c8a0906
+    name: config
+    type: application
+    urls:
+    - https://github.com/cvltmaheshp/helm-charts/releases/download/config-1.0.2/config-1.0.2.tgz
+    version: 1.0.2
   - apiVersion: v2
     appVersion: "1"
     created: "2022-11-10T19:55:53.17033601Z"
@@ -37,6 +68,17 @@ entries:
   networkgateway:
   - apiVersion: v2
     appVersion: "1"
+    created: "2022-11-22T18:08:13.717282151Z"
+    description: A Helm chart for creating an FS agent which can serve as a network
+      gateway
+    digest: 5d2edf2c0065a6b91a36ab3f005c9c112434346e776da2b456a435ca90870cd1
+    name: networkgateway
+    type: application
+    urls:
+    - https://github.com/cvltmaheshp/helm-charts/releases/download/networkgateway-1.0.2/networkgateway-1.0.2.tgz
+    version: 1.0.2
+  - apiVersion: v2
+    appVersion: "1"
     created: "2022-11-10T19:55:53.308184672Z"
     description: A Helm chart for creating an FS agent which can serve as a network
       gateway
@@ -49,6 +91,16 @@ entries:
   webserver:
   - apiVersion: v2
     appVersion: "1"
+    created: "2022-11-22T18:08:13.968313584Z"
+    description: A Helm chart for creating the webserver
+    digest: 4cc664f2271fce88cbe77d6492aff19b45b54960b004508ba5a222c7576413d4
+    name: webserver
+    type: application
+    urls:
+    - https://github.com/cvltmaheshp/helm-charts/releases/download/webserver-1.0.2/webserver-1.0.2.tgz
+    version: 1.0.2
+  - apiVersion: v2
+    appVersion: "1"
     created: "2022-11-10T19:55:53.46753156Z"
     description: A Helm chart for creating the webserver
     digest: 32f061985452a5e013568a6284259ef6e8b7b5193cd18161c7c085e3c566925d
@@ -57,4 +109,4 @@ entries:
     urls:
     - https://github.com/cvltmaheshp/helm-charts/releases/download/webserver-1/webserver-1.tgz
     version: "1"
-generated: "2022-11-10T19:55:53.46753966Z"
+generated: "2022-11-22T18:08:13.968340684Z"
