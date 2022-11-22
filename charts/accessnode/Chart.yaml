@@ -1,6 +1,6 @@
 apiVersion: v2
-name: networkgateway
-description: A Helm chart for creating an FS agent which can serve as a network gateway
+name: accessnode
+description: A Helm chart for creating an access node for backups
 type: application
 version: 1.0.2
 appVersion: "1"
