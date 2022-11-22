@@ -1,5 +1,16 @@
 apiVersion: v1
 entries:
+  accessnode:
+  - apiVersion: v2
+    appVersion: "1"
+    created: "2022-11-22T18:20:23.427722481Z"
+    description: A Helm chart for creating an access node for backups
+    digest: 4c0eb85d5d306f6b7cf4cc7648a5f1674ff8b54c76c587669db020aeb53375b5
+    name: accessnode
+    type: application
+    urls:
+    - https://github.com/cvltmaheshp/helm-charts/releases/download/accessnode-1.0.2/accessnode-1.0.2.tgz
+    version: 1.0.2
   commandcenter:
   - apiVersion: v2
     appVersion: "1"
@@ -65,6 +76,17 @@ entries:
     urls:
     - https://github.com/cvltmaheshp/helm-charts/releases/download/config-1/config-1.tgz
     version: "1"
+  mediaagent:
+  - apiVersion: v2
+    appVersion: "1"
+    created: "2022-11-22T18:20:23.561532Z"
+    description: A Helm chart for creating an MediaAgent for Backups
+    digest: c1dd96275ac6531dec0ce6e245c3df7fa380496c2c75d8ebdc8bc7a3dfb53009
+    name: mediaagent
+    type: application
+    urls:
+    - https://github.com/cvltmaheshp/helm-charts/releases/download/mediaagent-1.0.2/mediaagent-1.0.2.tgz
+    version: 1.0.2
   networkgateway:
   - apiVersion: v2
     appVersion: "1"
@@ -109,4 +131,4 @@ entries:
     urls:
     - https://github.com/cvltmaheshp/helm-charts/releases/download/webserver-1/webserver-1.tgz
     version: "1"
-generated: "2022-11-22T18:08:13.968340684Z"
+generated: "2022-11-22T18:20:23.5615479Z"
