@@ -10,7 +10,7 @@ spec:
   # This section contains details about the deployment. 
   # This file should be applied on the k8s cluster, only after all the other yaml files are applied. 
   # Because this file consumes the specifications mentioned in all the other files, and deploys the image. 
-  replicas: 1
+  replicas: 1  
   strategy:
     type: Recreate  
   selector:
@@ -25,12 +25,14 @@ spec:
       {{- include "cv.imagePullSecret" . }}
       {{- include "cv.additionalPodspecs" . }}
       containers:
-      # This section contains details about the commserve container. 
+      # This section contains details about the media agent container. 
       # User has to substitute certain values in the section. Refer to comments on each line for more details.       
       - name: {{ include "cv.metadataname" . }}
-        image: {{ include "cv.image" (list .Values "commserve" ) }}
+        image: {{ include "cv.image" (list .Values "mediaagent" ) }}
         {{- include "cv.resources" . }}
         envFrom:
+        - configMapRef:
+           name: {{(.Values.global).appname}}cvconfig
         - secretRef:
            name: {{(.Values.global).appname}}cvcreds
         env:
@@ -40,19 +42,9 @@ spec:
         - name: CV_CLIENT_HOSTNAME
           # hostname of the client should match the service name
           value: {{ include "cv.hostname" . }}
-        {{ if .Values.email }}
-        - name: CVID_EMAIL
-          # Optional. Email of admin user
-          value: {{ .Values.email }}
-        {{ end }}
         # ports can be left default
-        ports:                                           # Ports can be left as mentioned as commserver needs all of them for correct functioning.   
-        - containerPort: 5000        
-        - containerPort: 8403
-        - containerPort: 8401
-        - containerPort: 1433
-        - containerPort: 27017
-        - containerPort: 8052        
+        ports:                                                      
+        - containerPort: 8403    
         volumeMounts:
         # This section contains list of persistent volumes that has to be mounted onto the container.                 
         # This can be left with default settings as mentioned in this template.
@@ -66,15 +58,15 @@ spec:
         - name: cv-storage-certificates
           mountPath: /opt/commvault/appdata
           subPath: certificates
-        - name: cv-storage-database
-          mountPath: /opt/commvaultDB
-          subPath: commvaultDB
-        - name: cv-storage-drbackups
-          mountPath: /opt/commvaultDB/jobResults
-          subPath: commvaultDB
-        - name: cv-storage-database
-          mountPath: /var/opt/mssql
-          subPath: mssql
+        - name: cv-storage-jobresults
+          mountPath: /opt/commvault/iDataAgent/jobResults
+          subPath: jobResults
+        - name: cv-storage-indexcache
+          mountPath: /opt/commvault/MediaAgent/IndexCache
+          subPath: indexcache
+        - name: cv-storage-ddb
+          mountPath: /opt/ddb
+          subPath: ddb
           
       volumes:
       # This section mentions the persistent volume claims that are referenced in the above container. 
@@ -86,10 +78,13 @@ spec:
       - name: cv-storage-certificates
         persistentVolumeClaim:
            claimName: {{ include "cv.metadataname" . }}-certificates
-      - name: cv-storage-database
+      - name: cv-storage-jobresults
         persistentVolumeClaim:
-           claimName: {{ include "cv.metadataname" . }}-database
-      - name: cv-storage-drbackups
+           claimName: {{ include "cv.metadataname" . }}-jobresults
+      - name: cv-storage-indexcache
         persistentVolumeClaim:
-           claimName: {{ include "cv.metadataname" . }}-drbackups
+           claimName: {{ include "cv.metadataname" . }}-indexcache
+      - name: cv-storage-ddb
+        persistentVolumeClaim:
+           claimName: {{ include "cv.metadataname" . }}-ddb
 

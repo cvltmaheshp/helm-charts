@@ -61,7 +61,7 @@ spec:
           mountPath: /etc/CommVaultRegistry
           subPath: Registry   
         - name: cv-storage-certificates
-          mountPath: /opt/commvault/Base/certificates
+          mountPath: /opt/commvault/appdata
           subPath: certificates
 
       volumes:

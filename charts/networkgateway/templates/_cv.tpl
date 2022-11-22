@@ -2,6 +2,7 @@
 {{- $values := index . 0 }}
 {{- $defaultRepository := index . 1 }}
     {{- or ($values.image).registry (($values.global).image).registry }}
+    {{- or ($values.image).namespace (($values.global).image).namespace "commvault" }}/
     {{- or ($values.image).repository (($values.global).image).repository $defaultRepository }}:
     {{- or ($values.image).tag (($values.global).image).tag "latest" }}
 {{- end }}
