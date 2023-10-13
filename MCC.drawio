@@ -1,11 +1,32 @@
-<mxfile host="app.diagrams.net" modified="2023-10-13T14:42:24.123Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="HEqNL2R-gC87E6-L771J" version="22.0.4" type="github">
+<mxfile host="app.diagrams.net" modified="2023-10-13T14:57:03.589Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="zUcQBzJHnLNthcGo4XPP" version="22.0.4" type="github">
   <diagram name="Page-1" id="dYJIcn81e7g7vcgeo-OG">
-    <mxGraphModel dx="794" dy="510" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1909" dy="680" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="Buz_d9mLxZh0_B-WvXrS-1" value="" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
-          <mxGeometry x="110" y="230" width="80" height="80" as="geometry" />
+        <mxCell id="Buz_d9mLxZh0_B-WvXrS-1" value="Application" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="-30" y="230" width="190" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVsMwjgcGZFgZSncO5W-1" value="Metrics/master" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="425" y="230" width="190" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVsMwjgcGZFgZSncO5W-2" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="Buz_d9mLxZh0_B-WvXrS-1" target="6hVsMwjgcGZFgZSncO5W-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="430" y="350" as="sourcePoint" />
+            <mxPoint x="420" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6hVsMwjgcGZFgZSncO5W-3" value="1. /Login (Authenticate on master)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="185" y="250" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVsMwjgcGZFgZSncO5W-4" value="" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="6hVsMwjgcGZFgZSncO5W-1" target="Buz_d9mLxZh0_B-WvXrS-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="430" y="350" as="sourcePoint" />
+            <mxPoint x="480" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6hVsMwjgcGZFgZSncO5W-5" value="QSDK Token&lt;br&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="265" y="298" width="90" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
